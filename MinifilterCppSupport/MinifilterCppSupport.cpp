@@ -3,15 +3,6 @@
 #include "DriverGlobals.hpp"
 #include "cpp_includes.hpp"
 
-class cls
-{
-public:
-    cls(double d) { a = d; }
-    ~cls() = default;
-private:
-    double a;
-};
-
 EXTERN_C_START
 
 NTSTATUS
@@ -20,8 +11,6 @@ DriverEntry (
     _In_ PUNICODE_STRING    RegistryPath
 )
 {
-    cls c{ 1.3 }; c;
-
     NTSTATUS status = STATUS_UNSUCCESSFUL;
     UNREFERENCED_PARAMETER(RegistryPath);
 
