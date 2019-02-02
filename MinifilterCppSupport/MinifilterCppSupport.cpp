@@ -6,26 +6,6 @@
 #include "cpp_crt_static_class_support.hpp"
 
 
-class Test : public CppNonPagedObject<MEM_TAG_TST>
-{
-public:
-    Test(int f1, int f2)
-    {
-        this->f1 = f1;
-        this->f2 = f2;
-        __debugbreak();
-    }
-    ~Test()
-    {
-        __debugbreak();
-    }
-private:
-    int f1 = 5;
-    int f2 = 4;
-};
-
-Test a{ 1,2 };
-
 EXTERN_C_START
 
 NTSTATUS
