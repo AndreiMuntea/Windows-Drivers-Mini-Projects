@@ -17,20 +17,61 @@
       <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
       <Extensions>inf;inv;inx;mof;mc;</Extensions>
     </Filter>
+    <Filter Include="Header Files\CPP Support">
+      <UniqueIdentifier>{c806431f-4395-4184-9ece-c115c20b3f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CPP Support">
+      <UniqueIdentifier>{8b663d54-68cc-447e-b9b1-7a5378b93953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Driver Initialization">
+      <UniqueIdentifier>{895cceaa-b4d2-4256-8267-c4f933ded8cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Driver Initialization">
+      <UniqueIdentifier>{afac3830-66ff-4f29-a644-0eecba068485}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
     <Inf Include="MinifilterCppSupport.inf">
       <Filter>Driver Files</Filter>
     </Inf>
-  </ItemGroup>  
-  <ItemGroup>
-    <ClCompile Include="MinifilterCppSupport.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MinifilterCppSupport.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MinifilterCppSupport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_definitions.cpp">
+      <Filter>Source Files\CPP Support</Filter>
+    </ClCompile>
+    <ClCompile Include="DriverGlobals.cpp">
+      <Filter>Source Files\Driver Initialization</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cpp_definitions.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_allocation_tags.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_object.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_paged_object.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_nonpaged_object.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="DriverStartRoutines.hpp">
+      <Filter>Header Files\Driver Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="DriverGlobals.hpp">
+      <Filter>Header Files\Driver Initialization</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -36,7 +36,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MinifilterCppSupport.rc" />
-    <ClCompile Include="MinifilterCppSupport.c" />
+    <ClCompile Include="cpp_definitions.cpp" />
+    <ClCompile Include="DriverGlobals.cpp" />
+    <ClCompile Include="MinifilterCppSupport.cpp" />
     <Inf Include="MinifilterCppSupport.inf" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -141,6 +143,10 @@
     <Link>
       <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <RuntimeLibrary>
+      </RuntimeLibrary>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Link>
@@ -151,6 +157,10 @@
     <Link>
       <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <RuntimeLibrary>
+      </RuntimeLibrary>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
@@ -161,6 +171,10 @@
     <Link>
       <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <RuntimeLibrary>
+      </RuntimeLibrary>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <Link>
@@ -171,6 +185,10 @@
     <Link>
       <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <RuntimeLibrary>
+      </RuntimeLibrary>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <Link>
@@ -179,6 +197,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <FilesToPackage Include="$(TargetPath)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cpp_allocation_tags.hpp" />
+    <ClInclude Include="cpp_definitions.hpp" />
+    <ClInclude Include="cpp_nonpaged_object.hpp" />
+    <ClInclude Include="cpp_object.hpp" />
+    <ClInclude Include="cpp_paged_object.hpp" />
+    <ClInclude Include="DriverGlobals.hpp" />
+    <ClInclude Include="DriverStartRoutines.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
