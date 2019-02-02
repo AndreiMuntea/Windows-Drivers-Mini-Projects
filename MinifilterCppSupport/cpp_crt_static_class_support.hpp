@@ -8,10 +8,10 @@ void
 CppInitializeDestructorsList();
 
 void
-CppCallAllDestructors();
+CppCallStaticDestructors();
 
 void
-CppCallAllConstructors(
+CppCallStaticConstructors(
     _In_ PVFV* FirstPVFVEntry,
     _In_ PVFV* LastPVFVEntry
 );

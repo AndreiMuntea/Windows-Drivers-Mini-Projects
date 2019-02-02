@@ -33,7 +33,7 @@ DriverEntry (
     }
 
     CppInitializeDestructorsList();
-    CppCallAllConstructors(__crtXca, __crtXcz);
+    CppCallStaticConstructors(__crtXca, __crtXcz);
 
 Exit:
     return status;
@@ -48,7 +48,7 @@ DriverUnload (
     UNREFERENCED_PARAMETER(Flags);
 
     FltUnregisterFilter(gDrvData.FilterHandle);
-    CppCallAllDestructors();
+    CppCallStaticDestructors();
     DrvUninitializeGlobalData();
 
     return STATUS_SUCCESS;

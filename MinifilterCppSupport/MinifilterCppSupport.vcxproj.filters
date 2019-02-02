@@ -57,7 +57,7 @@
       <Filter>Source Files\CPP Support</Filter>
     </ClCompile>
     <ClCompile Include="cpp_crt_static_class_support.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CPP Support</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -35,7 +35,7 @@ CppInitializeDestructorsList()
 }
 
 void
-CppCallAllDestructors()
+CppCallStaticDestructors()
 {
     while (!IsListEmpty(&gDestructorsList.Entry))
     {
@@ -49,7 +49,7 @@ CppCallAllDestructors()
 }
 
 void
-CppCallAllConstructors(
+CppCallStaticConstructors(
     _In_ PVFV* FirstPVFVEntry,
     _In_ PVFV* LastPVFVEntry
 )
