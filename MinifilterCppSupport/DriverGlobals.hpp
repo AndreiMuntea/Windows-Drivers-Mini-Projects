@@ -3,6 +3,7 @@
 
 #include <fltKernel.h>
 
+
 EXTERN_C_START
 
 typedef struct _DRIVER_GLOBAL_DATA

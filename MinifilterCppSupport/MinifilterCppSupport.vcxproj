@@ -39,6 +39,7 @@
     <ClCompile Include="cpp_crt_data_section.cpp" />
     <ClCompile Include="cpp_crt_static_class_support.cpp" />
     <ClCompile Include="cpp_definitions.cpp" />
+    <ClCompile Include="cpp_floating_point.cpp" />
     <ClCompile Include="DriverGlobals.cpp" />
     <ClCompile Include="MinifilterCppSupport.cpp" />
     <Inf Include="MinifilterCppSupport.inf" />
@@ -205,6 +206,8 @@
     <ClInclude Include="cpp_crt_data_section.hpp" />
     <ClInclude Include="cpp_crt_static_class_support.hpp" />
     <ClInclude Include="cpp_definitions.hpp" />
+    <ClInclude Include="cpp_floating_point.hpp" />
+    <ClInclude Include="cpp_includes.hpp" />
     <ClInclude Include="cpp_nonpaged_object.hpp" />
     <ClInclude Include="cpp_object.hpp" />
     <ClInclude Include="cpp_paged_object.hpp" />

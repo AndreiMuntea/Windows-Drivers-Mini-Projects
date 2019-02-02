@@ -1,10 +1,16 @@
 #include <fltKernel.h>
 
 #include "DriverGlobals.hpp"
-#include "cpp_nonpaged_object.hpp"
-#include "cpp_allocation_tags.hpp"
-#include "cpp_crt_static_class_support.hpp"
+#include "cpp_includes.hpp"
 
+class cls
+{
+public:
+    cls(double d) { a = d; }
+    ~cls() = default;
+private:
+    double a;
+};
 
 EXTERN_C_START
 
@@ -14,6 +20,8 @@ DriverEntry (
     _In_ PUNICODE_STRING    RegistryPath
 )
 {
+    cls c{ 1.3 }; c;
+
     NTSTATUS status = STATUS_UNSUCCESSFUL;
     UNREFERENCED_PARAMETER(RegistryPath);
 

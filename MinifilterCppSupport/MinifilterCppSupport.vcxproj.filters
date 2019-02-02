@@ -59,6 +59,9 @@
     <ClCompile Include="cpp_crt_static_class_support.cpp">
       <Filter>Source Files\CPP Support</Filter>
     </ClCompile>
+    <ClCompile Include="cpp_floating_point.cpp">
+      <Filter>Source Files\CPP Support</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cpp_definitions.hpp">
@@ -86,6 +89,12 @@
       <Filter>Header Files\CPP Support\CPP Objects</Filter>
     </ClInclude>
     <ClInclude Include="cpp_crt_static_class_support.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_floating_point.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_includes.hpp">
       <Filter>Header Files\CPP Support</Filter>
     </ClInclude>
   </ItemGroup>
