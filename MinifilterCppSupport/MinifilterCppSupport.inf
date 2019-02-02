@@ -1,17 +1,17 @@
 ;;;
-;;; WindowsDriversMini-Projects
+;;; MinifilterCppSupport
 ;;;
 
 [Version]
 Signature   = "$Windows NT$"
 ; TODO - Change the Class and ClassGuid to match the Load Order Group value, see http://msdn.microsoft.com/en-us/windows/hardware/gg462963
-; Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
-; ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}    ;This value is determined by the Load Order Group value
-Class = "_TODO_Change_Class_appropriately_"
-ClassGuid = {_TODO_Change_ClassGuid_appropriately_}
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}    ;This value is determined by the Load Order Group value
+;Class = "_TODO_Change_Class_appropriately_"
+;ClassGuid = {_TODO_Change_ClassGuid_appropriately_}
 Provider    = %ManufacturerName%
 DriverVer   = 
-CatalogFile = WindowsDriversMini-Projects.cat
+CatalogFile = MinifilterCppSupport.cat
 
 [DestinationDirs]
 DefaultDestDir          = 12
@@ -51,8 +51,8 @@ ServiceType      = 2                            ;SERVICE_FILE_SYSTEM_DRIVER
 StartType        = 3                            ;SERVICE_DEMAND_START
 ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
 ; TODO - Change the Load Order Group value, see http://connect.microsoft.com/site221/content/content.aspx?ContentID=2512
-; LoadOrderGroup = "FSFilter Activity Monitor"
-LoadOrderGroup = "_TODO_Change_LoadOrderGroup_appropriately_"
+ LoadOrderGroup = "FSFilter Activity Monitor"
+; LoadOrderGroup = "_TODO_Change_LoadOrderGroup_appropriately_"
 AddReg           = MiniFilter.AddRegistry
 
 ;
@@ -74,7 +74,7 @@ HKR,"Instances\"%Instance1.Name%,"Flags",0x00010001,%Instance1.Flags%
 %DriverName%.sys
 
 [SourceDisksFiles]
-WindowsDriversMini-Projects.sys = 1,,
+MinifilterCppSupport.sys = 1,,
 
 [SourceDisksNames]
 1 = %DiskId1%,,,
@@ -86,15 +86,15 @@ WindowsDriversMini-Projects.sys = 1,,
 [Strings]
 ; TODO - Add your manufacturer
 ManufacturerName        = "Template"
-ServiceDescription      = "WindowsDriversMini-Projects Mini-Filter Driver"
-ServiceName             = "WindowsDriversMini-Projects"
-DriverName              = "WindowsDriversMini-Projects"
-DiskId1                 = "WindowsDriversMini-Projects Device Installation Disk"
+ServiceDescription      = "MinifilterCppSupport Mini-Filter Driver"
+ServiceName             = "MinifilterCppSupport"
+DriverName              = "MinifilterCppSupport"
+DiskId1                 = "MinifilterCppSupport Device Installation Disk"
 
 ;Instances specific information.
-DefaultInstance         = "WindowsDriversMini-Projects Instance"
-Instance1.Name          = "WindowsDriversMini-Projects Instance"
+DefaultInstance         = "MinifilterCppSupport Instance"
+Instance1.Name          = "MinifilterCppSupport Instance"
 ; TODO - Change the altitude value, see http://connect.microsoft.com/site221/content/content.aspx?ContentID=2512
-;Instance1.Altitude      = "370030"
-Instance.Altitude       = "_TODO_Change_Altitude_appropriately_"
+Instance1.Altitude      = "370030"
+;Instance.Altitude       = "_TODO_Change_Altitude_appropriately_"
 Instance1.Flags         = 0x0              ; Allow all attachments

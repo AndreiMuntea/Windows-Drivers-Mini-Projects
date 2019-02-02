@@ -35,18 +35,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WindowsDriversMini-Projects.rc" />
-    <ClCompile Include="WindowsDriversMini-Projects.c" />
-    <Inf Include="WindowsDriversMini-Projects.inf" />
+    <ResourceCompile Include="MinifilterCppSupport.rc" />
+    <ClCompile Include="MinifilterCppSupport.c" />
+    <Inf Include="MinifilterCppSupport.inf" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3BF478EA-940D-4D22-AB54-D08E09CFC527}</ProjectGuid>
+    <ProjectGuid>{45D9EE76-78D5-4D6C-9314-755F0758D4C0}</ProjectGuid>
     <TemplateGuid>{f2f62967-0815-4fd7-9b86-6eedcac766eb}</TemplateGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <Configuration>Debug</Configuration>
     <Platform Condition="'$(Platform)' == ''">Win32</Platform>
-    <RootNamespace>Windows_Drivers_Mini_Projects</RootNamespace>
+    <RootNamespace>MinifilterCppSupport</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
