@@ -36,6 +36,8 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MinifilterCppSupport.rc" />
+    <ClCompile Include="cpp_crt_data_section.cpp" />
+    <ClCompile Include="cpp_crt_static_class_support.cpp" />
     <ClCompile Include="cpp_definitions.cpp" />
     <ClCompile Include="DriverGlobals.cpp" />
     <ClCompile Include="MinifilterCppSupport.cpp" />
@@ -200,6 +202,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cpp_allocation_tags.hpp" />
+    <ClInclude Include="cpp_crt_data_section.hpp" />
+    <ClInclude Include="cpp_crt_static_class_support.hpp" />
     <ClInclude Include="cpp_definitions.hpp" />
     <ClInclude Include="cpp_nonpaged_object.hpp" />
     <ClInclude Include="cpp_object.hpp" />

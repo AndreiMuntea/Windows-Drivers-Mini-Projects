@@ -3,19 +3,28 @@
 #include "DriverGlobals.hpp"
 #include "cpp_nonpaged_object.hpp"
 #include "cpp_allocation_tags.hpp"
+#include "cpp_crt_static_class_support.hpp"
 
 
 class Test : public CppNonPagedObject<MEM_TAG_TST>
 {
 public:
-    Test() = default;
-    Test(int f1, int f2) : f1{ f1 }, f2{ f2 } {};
-    ~Test() = default;
+    Test(int f1, int f2)
+    {
+        this->f1 = f1;
+        this->f2 = f2;
+        __debugbreak();
+    }
+    ~Test()
+    {
+        __debugbreak();
+    }
 private:
     int f1 = 5;
     int f2 = 4;
 };
 
+Test a{ 1,2 };
 
 EXTERN_C_START
 
@@ -43,11 +52,8 @@ DriverEntry (
         goto Exit;
     }
 
-    auto t = new Test(1, 2);
-    delete t;
-
-    auto c = new Test[100];
-    delete[] c;
+    CppInitializeDestructorsList();
+    CppCallAllConstructors(__crtXca, __crtXcz);
 
 Exit:
     return status;
@@ -62,6 +68,7 @@ DriverUnload (
     UNREFERENCED_PARAMETER(Flags);
 
     FltUnregisterFilter(gDrvData.FilterHandle);
+    CppCallAllDestructors();
     DrvUninitializeGlobalData();
 
     return STATUS_SUCCESS;

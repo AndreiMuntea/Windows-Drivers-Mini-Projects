@@ -29,6 +29,9 @@
     <Filter Include="Source Files\Driver Initialization">
       <UniqueIdentifier>{afac3830-66ff-4f29-a644-0eecba068485}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\CPP Support\CPP Objects">
+      <UniqueIdentifier>{c97a5d90-456a-49a8-bc32-5300ccf4819f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Inf Include="MinifilterCppSupport.inf">
@@ -50,21 +53,15 @@
     <ClCompile Include="DriverGlobals.cpp">
       <Filter>Source Files\Driver Initialization</Filter>
     </ClCompile>
+    <ClCompile Include="cpp_crt_data_section.cpp">
+      <Filter>Source Files\CPP Support</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp_crt_static_class_support.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cpp_definitions.hpp">
-      <Filter>Header Files\CPP Support</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_allocation_tags.hpp">
-      <Filter>Header Files\CPP Support</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_object.hpp">
-      <Filter>Header Files\CPP Support</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_paged_object.hpp">
-      <Filter>Header Files\CPP Support</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp_nonpaged_object.hpp">
       <Filter>Header Files\CPP Support</Filter>
     </ClInclude>
     <ClInclude Include="DriverStartRoutines.hpp">
@@ -72,6 +69,24 @@
     </ClInclude>
     <ClInclude Include="DriverGlobals.hpp">
       <Filter>Header Files\Driver Initialization</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_crt_data_section.hpp">
+      <Filter>Header Files\CPP Support</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_paged_object.hpp">
+      <Filter>Header Files\CPP Support\CPP Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_object.hpp">
+      <Filter>Header Files\CPP Support\CPP Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_nonpaged_object.hpp">
+      <Filter>Header Files\CPP Support\CPP Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_allocation_tags.hpp">
+      <Filter>Header Files\CPP Support\CPP Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp_crt_static_class_support.hpp">
+      <Filter>Header Files\CPP Support</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
